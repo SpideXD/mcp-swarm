@@ -1,0 +1,123 @@
+{
+  "frontend": {
+    "description": "Frontend development tools: browser automation, web fetching, sequential thinking",
+    "servers": [
+      {
+        "name": "playwright",
+        "command": "npx",
+        "args": ["-y", "@playwright/mcp"],
+        "description": "Browser automation using Playwright - navigate, click, fill forms, screenshots"
+      },
+      {
+        "name": "fetch-server",
+        "command": "uvx",
+        "args": ["mcp-server-fetch"],
+        "description": "Fetch web pages and extract content as markdown"
+      },
+      {
+        "name": "sequential-thinking",
+        "command": "npx",
+        "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
+        "description": "Structured problem-solving through dynamic thinking steps"
+      }
+    ]
+  },
+  "backend": {
+    "description": "Backend development tools: databases, Docker, filesystem operations",
+    "servers": [
+      {
+        "name": "postgres-mcp",
+        "command": "npx",
+        "args": ["-y", "@modelcontextprotocol/server-postgres", "postgresql://localhost:5432/mydb"],
+        "description": "Read-only PostgreSQL database access - queries and schema inspection"
+      },
+      {
+        "name": "sqlite-mcp",
+        "command": "uvx",
+        "args": ["mcp-server-sqlite", "--db-path", "/tmp/claude/workspace.db"],
+        "description": "SQLite database - read/write queries, table creation, schema inspection"
+      },
+      {
+        "name": "docker-mcp",
+        "command": "npx",
+        "args": ["-y", "@0xshariq/docker-mcp-server@latest"],
+        "description": "Docker management - containers, images, volumes, networks, compose"
+      },
+      {
+        "name": "sequential-thinking",
+        "command": "npx",
+        "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
+        "description": "Structured problem-solving through dynamic thinking steps"
+      }
+    ]
+  },
+  "devops": {
+    "description": "DevOps tools: Docker, Kubernetes, Git operations",
+    "servers": [
+      {
+        "name": "docker-mcp",
+        "command": "npx",
+        "args": ["-y", "@0xshariq/docker-mcp-server@latest"],
+        "description": "Docker management - containers, images, volumes, networks, compose"
+      },
+      {
+        "name": "kubernetes-mcp",
+        "command": "npx",
+        "args": ["mcp-server-kubernetes"],
+        "description": "Kubernetes cluster management - pods, deployments, services, namespaces"
+      },
+      {
+        "name": "git-mcp",
+        "command": "uvx",
+        "args": ["mcp-server-git"],
+        "description": "Git repository operations - diff, log, status, commit, branch"
+      }
+    ]
+  },
+  "data": {
+    "description": "Data analysis tools: SQLite, PostgreSQL, filesystem access",
+    "servers": [
+      {
+        "name": "sqlite-mcp",
+        "command": "uvx",
+        "args": ["mcp-server-sqlite", "--db-path", "/tmp/claude/workspace.db"],
+        "description": "SQLite database - read/write queries, table creation, schema inspection"
+      },
+      {
+        "name": "postgres-mcp",
+        "command": "npx",
+        "args": ["-y", "@modelcontextprotocol/server-postgres", "postgresql://localhost:5432/mydb"],
+        "description": "Read-only PostgreSQL database access - queries and schema inspection"
+      },
+      {
+        "name": "filesystem-mcp",
+        "command": "npx",
+        "args": ["-y", "@modelcontextprotocol/server-filesystem", "/Users/agentswarm/Desktop"],
+        "description": "Secure filesystem operations - read/write files, directories, search"
+      }
+    ]
+  },
+  "web": {
+    "description": "Web interaction tools: fetching, scraping, browser automation",
+    "servers": [
+      {
+        "name": "fetch-server",
+        "command": "uvx",
+        "args": ["mcp-server-fetch"],
+        "description": "Fetch web pages and extract content as markdown"
+      },
+      {
+        "name": "playwright",
+        "command": "npx",
+        "args": ["-y", "@playwright/mcp"],
+        "description": "Browser automation using Playwright - navigate, click, fill forms, screenshots"
+      },
+      {
+        "name": "puppeteer-mcp",
+        "command": "npx",
+        "args": ["-y", "@modelcontextprotocol/server-puppeteer"],
+        "description": "Browser automation using Puppeteer - navigate, screenshot, click, evaluate JS"
+      }
+    ]
+  }
+}
