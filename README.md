@@ -2,7 +2,9 @@
 
 **Give any AI agent the ability to find, install, and use any MCP server on the fly.**
 
-MCP Swarm is a server manager that sits between your AI agents and the [MCP ecosystem](https://modelcontextprotocol.io). Instead of manually configuring each MCP server for each agent, you run one swarm and every agent connected to it can dynamically discover, install, and use any of the 2,290+ servers in the MCP registry -- no restarts, no config files, no human intervention.
+MCP Swarm is a **local-only** server manager that runs on your machine, sitting between your AI agents and the [MCP ecosystem](https://modelcontextprotocol.io). Instead of manually configuring each MCP server for each agent, you run one swarm and every agent connected to it can dynamically discover, install, and use any of the 2,290+ servers in the MCP registry -- no restarts, no config files, no human intervention.
+
+> **Local use only.** MCP Swarm is designed to run on your local machine (localhost). It binds to `127.0.0.1` by default and is not intended to be exposed to the internet. All servers, data, and configs stay on your machine.
 
 ## The Problem
 
