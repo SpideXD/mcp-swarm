@@ -268,6 +268,10 @@ node test-e2e.mjs
 
 65 tests across 13 suites covering all 15 tools, REST APIs, session isolation, concurrent access, profile CRUD, and edge cases.
 
+## Built With
+
+This project was built with the help of [Claude Code](https://claude.ai/claude-code) (Claude Opus 4.6).
+
 ## License
 
 MIT
