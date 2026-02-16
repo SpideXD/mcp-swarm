@@ -55,8 +55,8 @@ npm install && npm run build
 # Single agent (stdio)
 npm start
 
-# Multiple agents (HTTP)
-SWARM_PORT=3100 npm start
+# Multiple agents (HTTP) + dashboard UI
+SWARM_PORT=3100 SWARM_CORS=1 npm start
 ```
 
 ### Connect Claude Code
