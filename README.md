@@ -50,6 +50,10 @@ No restart. No config file edits. No human in the loop.
 ```bash
 git clone https://github.com/SpideXD/mcp-swarm.git
 cd mcp-swarm
+
+# Copy the example env and adjust if needed
+cp .env.example .env
+
 npm install && npm run build
 
 # Single agent (stdio)
@@ -58,6 +62,32 @@ npm start
 # Multiple agents (HTTP) + dashboard UI
 SWARM_PORT=3100 SWARM_CORS=1 npm start
 ```
+
+### Environment Setup
+
+Both backend and frontend include `.env.example` files. Copy them to get started:
+
+**Backend** (`.env`):
+```bash
+cp .env.example .env
+```
+```env
+SWARM_PORT=3100          # HTTP port (enables multi-agent mode)
+SWARM_HOST=127.0.0.1     # Bind address (keep localhost for security)
+SWARM_CORS=1             # Required for dashboard UI to connect
+# SWARM_DATA_DIR=~/.mcp-swarm   # SQLite storage location
+# HEALTH_CHECK_INTERVAL_MS=60000 # Health ping interval (0 to disable)
+```
+
+**Frontend** (`ui/.env.local`):
+```bash
+cp ui/.env.example ui/.env.local
+```
+```env
+NEXT_PUBLIC_SWARM_URL=http://localhost:3100  # Backend URL
+```
+
+The frontend URL is also configurable from the dashboard connection input at runtime.
 
 ### Connect Claude Code
 

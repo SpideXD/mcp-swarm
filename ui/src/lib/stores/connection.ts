@@ -28,7 +28,7 @@ export interface ConnectionState {
 }
 
 export const useConnectionStore = create<ConnectionState>((set, get) => ({
-  url: "http://localhost:3100",
+  url: process.env.NEXT_PUBLIC_SWARM_URL || "http://localhost:3100",
   sessionId: null,
   connected: false,
   connecting: false,
