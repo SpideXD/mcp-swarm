@@ -45,6 +45,11 @@ Agent: "I need to fetch a webpage"
 
 No restart. No config file edits. No human in the loop.
 
+## Prerequisites
+
+- **Node.js 18+** (20+ recommended)
+- **npm 9+**
+
 ## Quick Start
 
 ```bash
